@@ -10,7 +10,7 @@ const favicon = require('serve-favicon');
 const session = require('express-session');
 const mongoDbStore = require('connect-mongodb-session')(session);
 
-const MONGO_URI = 'mongodb://localhost:27017/technivo';
+const MONGO_URI = 'mongodb+srv://sebago:ibaolqho1085_@cluster0-r4hei.mongodb.net/test?retryWrites=true&w=majority';
 
 const  store = new mongoDbStore({
     uri: MONGO_URI,
