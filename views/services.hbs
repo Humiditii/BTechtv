@@ -1,0 +1,135 @@
+{{!--  --}}
+	</div>
+	<!--services-->
+	<!--services-->
+	<div class="w3ls-section services">
+		<div class="container">
+			<h2 class="h3-w3l">services</h2>
+			<h3 class="h3-w3l">Connect with our Technicians and Vendors</h3>
+			<div class="services-right">
+
+				{{#if vendors}}
+						{{#each vendors}}
+								<div class="services-grid">
+									<div class="col-md-2 col-sm-2 col-xs-2 sr-icon">
+										<span class="fa fa-lock" aria-hidden="true"></span>
+									</div>
+									<div class="col-md-10 col-sm-10 col-xs-10 sr-txt">
+										<h5>{{this.name}}</h5>
+										<p>{{this.phone}}</p>
+										<p>{{this.category}}</p>
+										<p>{{this.address}}</p>
+										<a href="/message?user={{this._id}}">Send message</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+						{{/each}}
+
+				{{/if}}
+
+			</div>
+			<div class="services-right">
+				<div class="services-grid">
+					{{#if builders}}
+						{{#each builders}}
+								<div class="services-grid">
+									<div class="col-md-2 col-sm-2 col-xs-2 sr-icon">
+										<span class="fa fa-lock" aria-hidden="true"></span>
+									</div>
+									<div class="col-md-10 col-sm-10 col-xs-10 sr-txt">
+										<h5>{{this.name}}</h5>
+										<p>{{this.phone}}</p>
+										<p>{{this.category}}</p>
+										<p>{{this.address}}</p>
+										<a href="/message?user={{this._id}}">Send message</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+						{{/each}}
+
+				{{/if}}
+
+
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+			<nav align="right">
+				<ul class="pagination pagination-sm">
+				{{#if pages}}
+					{{#each pages}}
+							<li><a href="services?page={{pages}}">{{pages}}</a></li>
+					{{/each}}
+				{{/if}}
+					{{!-- <li><a href="services?page=1">1</a></li>
+					<li><a href="services?page=2">2</a></li>
+					<li><a href="services?page=3">3</a></li>
+					<li><a href="services?page=4">4</a></li>
+					<li><a href="services?page=5">5</a></li> --}}
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
+	
+	<!--//services-->
+	<div class="agileits_w3layouts-services-mid">
+		<div class="col-md-5 services-mid-img"> 
+			
+		</div>
+		<div class="col-md-5 services-mid-text">
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+
+	
+	<div class="w3ls-section">
+		<div class="container">
+			<div class="services-w3ls-row agileits-w3layouts">
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
+					<i class="fa fa-user-secret" aria-hidden="true"></i>
+					<h5>Our workers</h5>
+					<p>Survey Architect, Q/S, Structural Engineer, Furniture Work, e.t.c .</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
+					<i class="fa fa-comments" aria-hidden="true"></i>
+					<h5>24/7 Personal Support</h5>
+					<p>We are available everytime anytime, just send message to the Company in the Contact section.</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
+					<i class="fa fa-gift" aria-hidden="true"></i>
+					<h5>Promos</h5>
+					<p>We try to compensate our clients who are loyal to us also.</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
+					<i class="fa fa-list-alt" aria-hidden="true"></i>
+					<h5>Building Experts</h5>
+					<p>Anything pertaining to building, we are there for you.</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+
+	<!--//services-->
+	<!--footer-->
+	
+	<!--//footer-->
+
+	<!-- modal-sign -->
+ 
+	<!-- modal-sign -->
+
+	<!-- //modal-sign -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+	
+	</script>
+
+	<script src="js/bootstrap.js"></script>
+

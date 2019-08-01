@@ -1,0 +1,113 @@
+<!-- typo -->
+
+    <div class="container">
+        <div class="grid_3 grid_5 agileinfo">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a class="" href="/edit-pwd?type=builders">Change password</a></li>
+                <li>
+                    <form action="/logout" method="post">
+                        <button class="btn btn-primary" type="submit">Logout</button>
+                    </form>
+                </li>
+            </ol>
+        </div>
+
+        
+
+                <div class="grid_3 grid_5 wthree">
+                    <h3>Feeds</h3>
+                    
+
+            <div class="col-md-6-offset-3 w3-agileits">
+               
+                <div class="list-group list-group-alternate">
+                   
+                    <a href="#" class="list-group-item"><span class="badge badge-primary">21</span> <i
+                            class="ti ti-eye"></i> Profile visits </a>
+                    <a href="#" class="list-group-item"><span class="badge">{{messagesLen}}</span> <i class="ti ti-comments"></i>
+                        Messages </a>
+                    <a href="#" class="list-group-item"><span class="badge badge-warning">{{productLeng}}</span> <i
+                            class="ti ti-bookmark"></i> Products </a>
+                    <a href="#" class="list-group-item"><span class="badge badge-danger">{{venNo}}</span> <i
+                            class="ti ti-bell"></i> Materials Vendors </a>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+                <div class="page-header">
+                    <h3 class="bars">Contacts of Material vendors</h3>
+                </div>
+        <div class="bs-docs-example">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if list}}
+                    {{#each list}}
+                    <tr>
+                        <td>#</td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.address}}</td>
+                        <td>{{this.phone}}</td>
+                    </tr>
+                    {{/each}}
+        
+                    {{/if}}
+        
+                </tbody>
+            </table>
+        </div>
+        
+
+        <br><br>
+
+        <H3>Messages</H3>
+        {{#if messagesSent}}
+        {{#each messagesSent}}
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h5 class="panel-title asd">
+                        <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#{{this._id}}" aria-expanded="false" aria-controls="{{this._id}}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
+                                class="glyphicon glyphicon-minus" aria-hidden="true"></i>Message from {{ this.name }}
+                        </a>
+                    </h5>
+                </div>
+                <div id="{{this._id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"
+                    aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body panel_text">
+                        {{this.message}}
+                        <p>Phone number:{{this.phone}}</p>
+                        <address>{{this.address}}</address>
+                        <form action="/delFromBuilder" method="POST">
+                            <input type="hidden" value="{{this._id}}" name="messageId">
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </div>
+        
+                </div>
+            </div>
+        
+            {{/each}}
+        
+            {{ else }}
+            <p>No message present</p>
+            {{/if}}
+        
+        </div>
+        </div> <br><br>
+        
+    </div>
+
+    
+<!-- //typo -->

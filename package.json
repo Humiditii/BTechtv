@@ -1,0 +1,28 @@
+{
+  "name": "Btech",
+  "version": "1.0.0",
+  "description": "Connecting sellers and workers together",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Babatunde AbdulHameed Olakunle",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongodb-session": "^2.1.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.5",
+    "nodemailer": "^6.2.1",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemon": "^1.19.0",
+    "passport": "^0.4.0",
+    "serve-favicon": "^2.5.0",
+    "session": "^0.1.0"
+  }
+}

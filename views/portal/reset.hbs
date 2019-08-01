@@ -1,0 +1,35 @@
+
+</div>
+<!-- contact -->
+<div class="w3ls-section contact">
+    <div class="container">
+
+        <div class="col-md-10 w3l_contact_form">
+            <h4>Reset password </h4>
+            <p align='center' ><b>Input your valid email address and check your mail</b></p>
+            <form action="/reset" method="post">
+
+                {{#if msg}}
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>Heads up!</strong> {{msg}}.
+                    </div>
+
+                {{/if}}
+                
+                <input type="email" name="Email" value="" placeholder="Email" required=""> <br> <br>
+
+                <input type="submit" value="Reset">  <br> <br>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+</div>
+<!-- contact -->
+<div class="w3ls-section contact">
+    <div class="container">
+       
+            <div class="col-md-10 w3l_contact_form">
+                <h4>Register as a Material Vendor or a Building Technician  </h4>
+                {{#if error}}
+                
+                <div class="alert alert-warning" role="alert">
+                    <strong>Heads up! {{error}} </strong>.
+                </div>
+
+                {{/if}}
+
+                <form action="/register" method="post">
+                    <input type="text" name="Name" value="Name" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                    <input type="email" name="Email" value="Email" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    
+                    <input type="text" name="Address" value="Address" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Address';}" required="">
+
+                    <input type="text" name="Phone" value="Phone" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Phone';}" required=""> <br> <br> 
+                    
+                    
+                        <select class="" name="category" >
+                            <option  value="Vendor">Material Vendor</option>
+                            <option  value="Technician"> Building Technician</option>
+                        </select>
+                   
+
+                    <input type="password" name="Password" value="" placeholder="Password" required=""> <br> <br>
+
+                    
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>

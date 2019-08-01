@@ -1,0 +1,43 @@
+
+<!-- contact -->
+<div class="grid_3 grid_5 agileinfo container">
+    <ol class="breadcrumb">
+        <li><a href="/vendors">Home</a></li>
+        <li><a class="" href="/add-product">Add Materials</a></li>
+        <li><a class="" href="/edit-pwd">Change password</a></li>
+        <li>
+            <form action="/logout" method="post">
+                <button class="btn btn-primary" type="submit">Logout</button>
+            </form>
+        </li>
+    </ol>
+</div>
+<div class="w3ls-section contact">
+    
+    <div class="container">
+        
+        <div class="w3ls-title">
+            <h2 class="h3-w3l">Add new materials</h2>
+        </div>
+        
+            <div class="col-md-7 w3l_contact_form">
+                <h4>fill in the below details</h4>
+                <form action="/add-product" method="post">
+                    <input type="text" name="name" value="Name" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                    <input type="number" name="price" step="0.01" placeholder="price" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    <textarea name="description" onfocus="this.value = '';"
+                        placeholder="Description" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+

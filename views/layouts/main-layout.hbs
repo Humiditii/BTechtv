@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="E-Banking Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href={{bootstrap}} type="text/css" rel="stylesheet" media="all">
+    <link href={{style}} type="text/css" rel="stylesheet" media="all">
+    <link href={{fontawesome}} rel="stylesheet"> <!-- font-awesome icons -->
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- web-fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+    <link
+        href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- //web-fonts -->
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="headerw3-agile">
+        <div class="header-w3mdl">
+            <!-- header-two -->
+            <div class="container">
+                <div class="agileits-logo navbar-left">
+                    <h1><a href="/"><img src="images/e.png" alt="logo" />BTech</a></h1>
+                </div>
+                <div class="agileits-hdright nav navbar-nav">
+                    <div class="header-w3top">
+                        <!-- header-top -->
+                        <ul class="w3l-nav-top">
+                            <li><i class="fa fa-phone"></i><span> +234 812 383 9431 </span></li>
+                            <li><a href="mailto:btechtv19@gmail.com"><i
+                                        class="fa fa-envelope-o"></i><span>btechtv19@gmail.com</span></a></li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="agile_social_banner">
+                        <ul class="agileits_social_list">
+                            <li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- banner -->
+    <div class="{{banner}} inner-banner">
+        <div class="header-nav">
+            <!-- header-three -->
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        Menu
+                    </button>
+                </div>
+                <!-- top-nav -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/" class="{{#if activeHomePage}} active {{/if}}">Home</a></li>
+                        <li><a href="about" class="{{#if activeAbout}} active {{/if}}">About</a></li>
+                        <li><a href="services" class="{{#if activeServices}} active {{/if}}">services</a></li>
+                        <li><a href="contact" class="{{#if activeContact}} active {{/if}}">Contact Us</a></li>
+                        {{#if isAuthenticated}} 
+                            <li>
+                                <form action="/logout" method="post">
+                                    <button class="btn btn-default" type="submit">Logout</button>
+                                </form>
+                            </li>
+                            
+                            {{else}}
+                                <li><a href="register" class="{{#if activeRegister}} active {{/if}}">Register</a></li>
+                                <li><a href="login" class="{{#if activeLogin}} active {{/if}}">Login</a></li>
+                               
+                        {{/if}}
+                                                
+                        
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+            </nav>
+        </div>
+        <!-- banner-text -->
+        <!-- banner -->
+            {{{body}}}
+        <!--footer-->
+        <div class="agile-footer w3ls-section">
+            <div class="container">
+                <div class="col-md-7 list-footer">
+                    <ul class="footer-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="contact">Contact Us</a></li>
+                    </ul>
+                    <p> BTech is a Company to help people looking for Building Technician and Material Vendors to ease their stress</p>
+                </div>
+                <div class="col-md-5 agileinfo-sub">
+                    <h6>Click the link below to start the subscription service</h6>
+                    <a href="#" data-toggle="" data-target="" onclick="alert('Coming back soon')">subscribe</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="w3_agile-copyright text-center">
+            <p>© 2019 Tecnivo TV. All rights reserved | Design by <a href="">AnjonixVyte Technology</a></p>
+        </div>
+        <!--//footer-->
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 3
+                $("#slider3").responsiveSlides({
+                    auto: true,
+                    pager: false,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+
+            });
+        </script>
+        <script src="js/SmoothScroll.min.js"></script>
+        <!-- smooth-scrolling-of-move-up -->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                };
+                */
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+
+        <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
