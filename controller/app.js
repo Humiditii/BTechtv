@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = mongoose.model('Register');
+const User = require('../models/register.model');
 const messageModel = require('../models/messages');
 exports.getIndex = (req, res, next) => {
     if (req.session.isLoggedIn) {

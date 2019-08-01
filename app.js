@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
-require('./models/db');
+const mongoose = require('mongoose');
+//require('./models/db');
 
 const app = express();
 
@@ -42,8 +43,19 @@ app.use(applicationRoutes);
 
 
 const port = process.env.port || 7000;
- app.listen(port, ()=>{
-    // console.log('serving on port ' + port);
- });
+//  app.listen(port, ()=>{
+//     // console.log('serving on port ' + port);
+//  });
+
+ mongoose
+     .connect(MONGO_URI, {
+             useNewUrlParser: true
+        })
+     .then(result => {
+         app.listen(port);
+     })
+     .catch(err => {
+         console.log(err);
+     });
 
 
