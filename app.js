@@ -43,7 +43,7 @@ app.use(applicationRoutes);
 
 const port = process.env.port || 7000;
  app.listen(port, ()=>{
-     console.log('serving on port ' + port);
+    // console.log('serving on port ' + port);
  });
 
 
