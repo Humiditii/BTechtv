@@ -42,7 +42,7 @@ app.use(applicationRoutes);
 
 
 
-const port = process.env.port || 7000;
+const port = process.env.PORT || 7000;
 //  app.listen(port, ()=>{
 //     // console.log('serving on port ' + port);
 //  });
