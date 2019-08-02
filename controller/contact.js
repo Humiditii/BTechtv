@@ -16,7 +16,7 @@ exports.contactUs = (req, res, next) => {
 
     return transporter.sendMail({
         to: adminMail,
-        from: reqPhone + '  ' + reqName,
+        from: 'reqPhone + '  ' + reqName',
         subject: sub,
         html: ' <h1>Name is'+ reqName+'</h1><p>'+reqMessage+'</p>'
     }).then( success => {
